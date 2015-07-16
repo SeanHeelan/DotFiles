@@ -1,0 +1,26 @@
+# Jekyll
+alias jk='jekyll'
+alias jksw='jk serve --watch'
+
+# Git
+alias gh='git push'
+alias gl='git pull'
+alias ga='git add'
+alias gc='git commit'
+
+# Rust
+## Cargo build
+alias cbd='cargo build'
+alias cbr='cargo build --release'
+alias cb='cbd'
+## Cargo run
+alias crd='cargo run'
+alias crr='cargo run --release'
+alias cr='crd'
+## Cargo update
+alias cu='cargo update'
+## Cargo test
+alias ct='cargo test'
+# Cargo doc
+alias cdoc='cargo doc'
+

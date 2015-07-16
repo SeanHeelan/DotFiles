@@ -1,0 +1,80 @@
+execute pathogen#infect()
+
+" Clear filetype flags before changing runtimepath to force Vim to 
+" reload them.
+filetype off
+filetype plugin indent off
+let mapleader=","
+set runtimepath+=$GOROOT/misc/vim
+set runtimepath+=$HOME/.vim/bundle/jshint2.vim/
+filetype plugin indent on
+syntax on
+
+" Haskell
+au FileType haskell set shiftround expandtab
+au FileType haskell set tabstop=8 softtabstop=4 shiftwidth=4 
+" vim2hs options
+let g:haskell_conceal = 0
+let g:haskell_conceal_enumerations = 0
+
+" Go
+au FileType go set tabstop=4 shiftwidth=4 noexpandtab
+au FileType go map <buffer> <Leader>m :make<Return>:copen<Return>
+au FileType go map <buffer> <Leader>p :cprevious<Return>
+au FileType go map <buffer> <Leader>n :cnext<Return>
+au FileType go map <buffer> <Leader>c :cclose<Return>
+au FileType go map <buffer> <Leader>l :GoLint<Return>
+au BufWritePre *.go :%s/\s\+$//e
+
+" Javacsript
+au FileType javascript setlocal expandtab shiftwidth=4 tabstop=4 
+	\ softtabstop=4 nolist number
+au BufWritePre *.js :%s/\s\+$//e
+au BufWritePre *.js :JSHint
+
+" jshint validation
+au filetype javascript noremap <silent><F1> :JSHint<CR>
+au filetype javascript inoremap <silent><F1> <C-O>:JSHint<CR>
+au filetype javascript vnoremap <silent><F1> :JSHint<CR>
+
+" show next jshint error
+au filetype javascript nnoremap <silent><F2> :lnext<CR>
+au filetype javascript inoremap <silent><F2> <C-O>:lnext<CR>
+au filetype javascript vnoremap <silent><F2> :lnext<CR>
+
+" show previous jshint error
+au filetype javascript nnoremap <silent><F3> :lprevious<CR>
+au filetype javascript inoremap <silent><F3> <C-O>:lprevious<CR>
+au filetype javascript vnoremap <silent><F3> :lprevious<CR>
+
+" C++
+au FileType cpp set softtabstop=4 shiftwidth=4 expandtab
+au BufWritePre *.cpp :%s/\s\+$//e
+
+" Python
+au FileType python set softtabstop=4 shiftwidth=4 expandtab
+au BufWritePre *.py :%s/\s\+$//e
+
+" Txt
+au FileType txt set nosmartindent noautoindent nocindent
+autocmd BufWritePre *.txt :%s/\s\+$//e
+
+" Markdown
+autocmd BufWritePre *.md :%s/\s\+$//e
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" General
+set background=dark
+highlight ColorColumn ctermbg=grey
+set colorcolumn=81
+set textwidth=80
+set number
