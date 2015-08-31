@@ -58,7 +58,8 @@ au FileType cpp set softtabstop=4 shiftwidth=4 expandtab
 au BufWritePre *.cpp :%s/\s\+$//e
 
 " Python
-au FileType python set softtabstop=4 shiftwidth=4 expandtab
+au FileType python set softtabstop=4 shiftwidth=4 tabstop=4
+au FileType python set expandtab smarttab autoindent
 au BufWritePre *.py :%s/\s\+$//e
 
 " Txt
