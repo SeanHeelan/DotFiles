@@ -8,7 +8,13 @@ let mapleader=","
 set runtimepath+=$GOROOT/misc/vim
 set runtimepath+=$HOME/.vim/bundle/jshint2.vim/
 filetype plugin indent on
+filetype on
 syntax on
+
+" ctags
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+set tags=./tags;$HOME
 
 " Haskell
 au FileType haskell set shiftround expandtab
