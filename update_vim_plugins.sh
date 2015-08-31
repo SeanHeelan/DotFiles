@@ -80,3 +80,15 @@ if ! get_vim_plugin "https://github.com/dag/vim2hs.git" \
 	"vim2hs"; then
 	exit 1
 fi
+
+if ! get_vim_plugin "git@github.com:xolox/vim-misc.git" \
+	$VIM_BUNDLE/vim-misc \
+	"vim-misc"; then
+	exit 1
+fi
+
+if ! get_vim_plugin "git@github.com:xolox/vim-easytags.git" \
+	$VIM_BUNDLE/vim-easytags \
+	"vim-easytags"; then
+	exit 1
+fi
