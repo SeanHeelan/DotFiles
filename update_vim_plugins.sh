@@ -92,3 +92,9 @@ if ! get_vim_plugin "git@github.com:xolox/vim-easytags.git" \
 	"vim-easytags"; then
 	exit 1
 fi
+
+if ! get_vim_plugin "git@github.com:scrooloose/nerdtree.git" \
+	$VIM_BUNDLE/nerdtree \
+	"nerdtree"; then
+	exit 1
+fi
