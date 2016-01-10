@@ -1,6 +1,6 @@
 execute pathogen#infect()
 
-" Clear filetype flags before changing runtimepath to force Vim to
+" Clear filetype flags before changing runtimepath to force Vim to 
 " reload them.
 filetype off
 filetype plugin indent off
@@ -18,7 +18,7 @@ set tags=./tags;$HOME
 
 " Haskell
 au FileType haskell set shiftround expandtab
-au FileType haskell set tabstop=8 softtabstop=4 shiftwidth=4
+au FileType haskell set tabstop=8 softtabstop=4 shiftwidth=4 
 " vim2hs options
 let g:haskell_conceal = 0
 let g:haskell_conceal_enumerations = 0
@@ -33,7 +33,7 @@ au FileType go map <buffer> <Leader>l :GoLint<Return>
 au BufWritePre *.go :%s/\s\+$//e
 
 " Javacsript
-au FileType javascript setlocal expandtab shiftwidth=4 tabstop=4
+au FileType javascript setlocal expandtab shiftwidth=4 tabstop=4 
 	\ softtabstop=4 nolist number
 au BufWritePre *.js :%s/\s\+$//e
 au BufWritePre *.js :JSHint
@@ -57,26 +57,10 @@ au filetype javascript vnoremap <silent><F3> :lprevious<CR>
 au FileType cpp set softtabstop=4 shiftwidth=4 expandtab
 au BufWritePre *.cpp :%s/\s\+$//e
 
-" C
-au FileType c set softtabstop=4 shiftwidth=4 expandtab
-au FileType c map <buffer> <Leader>p :lprevious<Return>
-au FileType c map <buffer> <Leader>n :lnext<Return>
-au FileType c map <buffer> <Leader>c :lclose<Return>
-au FileType c map <buffer> <Leader>g :ll<Space>
-
 " Python
 au FileType python set softtabstop=4 shiftwidth=4 tabstop=4
 au FileType python set expandtab smarttab autoindent
-au FileType python map <buffer> <Leader>p :lprevious<Return>
-au FileType python map <buffer> <Leader>n :lnext<Return>
-au FileType python map <buffer> <Leader>c :lclose<Return>
-au FileType python map <buffer> <Leader>g :ll<Space>
 au BufWritePre *.py :%s/\s\+$//e
-
-" Ruby
-au FileType ruby set softtabstop=2 shiftwidth=2 tabstop=2
-au FileType ruby set expandtab smarttab autoindent
-au BufWritePre *.rb :%s/\s\+$//e
 
 " Txt
 au FileType txt set nosmartindent noautoindent nocindent
@@ -84,9 +68,6 @@ autocmd BufWritePre *.txt :%s/\s\+$//e
 
 " Markdown
 autocmd BufWritePre *.md :%s/\s\+$//e
-
-" Git
-au FileType gitcommit set tw=72
 
 " Syntastic
 set statusline+=%#warningmsg#
@@ -98,12 +79,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" NERDtree
-map <C-n> :NERDTreeToggle<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
 " General
-set background=light
+set background=dark
 highlight ColorColumn ctermbg=grey
 set colorcolumn=81
 set textwidth=80
