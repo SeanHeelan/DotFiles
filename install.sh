@@ -9,4 +9,8 @@ source update_vim_plugins.sh
 
 echo "Installing bash aliases ..."
 cat shell/aliases >> $HOME/.bashrc
+
+echo "Installing bashrc extensions ..."
+cat shell/basrhc >> $HOME/.bashrc
+
 echo "Done"
