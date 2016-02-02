@@ -11,6 +11,6 @@ echo "Installing bash aliases ..."
 cat shell/aliases >> $HOME/.bashrc
 
 echo "Installing bashrc extensions ..."
-cat shell/basrhc >> $HOME/.bashrc
+cat shell/bashrc >> $HOME/.bashrc
 
 echo "Done"
