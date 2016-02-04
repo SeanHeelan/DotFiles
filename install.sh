@@ -7,6 +7,9 @@ cp vim/vimrc $HOME/.vimrc
 
 source update_vim_plugins.sh
 
+echo "Installing screenrc ..."
+cp screen/screenrc $HOME/.screenrc
+
 echo "Installing bash aliases ..."
 cat shell/aliases >> $HOME/.bashrc
 
