@@ -30,7 +30,7 @@ alias cdoc='cargo doc'
 alias agi='sudo apt-get install'
 alias agiy='sudo apt-get install -y'
 alias agr='sudo apt-get remove'
-alias ags='apt-cache search'
+alias acs='apt-cache search'
 alias agd='sudo apt-get update'
 alias agg='sudo apt-get upgrade'
 
