@@ -98,3 +98,9 @@ if ! get_vim_plugin "git@github.com:scrooloose/nerdtree.git" \
 	"nerdtree"; then
 	exit 1
 fi
+
+if ! get_vim_plugin "git@github.com:nvie/vim-flake8.git" \
+	$VIM_BUNDLE/vim-flake8 \
+	"vim-flake8"; then
+	exit 1
+fi

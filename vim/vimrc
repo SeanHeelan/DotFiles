@@ -67,6 +67,8 @@ au FileType c map <buffer> <Leader>g :ll<Space>
 " Python
 au FileType python set softtabstop=4 shiftwidth=4 tabstop=4
 au FileType python set expandtab smarttab autoindent
+au FileType python set colorcolumn=80
+au FileType python set textwidth=79
 au FileType python map <buffer> <Leader>p :lprevious<Return>
 au FileType python map <buffer> <Leader>n :lnext<Return>
 au FileType python map <buffer> <Leader>c :lclose<Return>
