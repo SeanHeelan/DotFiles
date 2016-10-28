@@ -56,6 +56,10 @@ au filetype javascript vnoremap <silent><F3> :lprevious<CR>
 " C++
 au FileType cpp set softtabstop=4 shiftwidth=4 expandtab
 au BufWritePre *.cpp :%s/\s\+$//e
+au FileType cpp map <buffer> <Leader>p :lprevious<Return>
+au FileType cpp map <buffer> <Leader>n :lnext<Return>
+au FileType cpp map <buffer> <Leader>c :lclose<Return>
+au FileType cpp map <buffer> <Leader>g :ll<Space>
 
 " C
 au FileType c set softtabstop=4 shiftwidth=4 expandtab
@@ -99,6 +103,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_cpp_config_file = '.syntastic_config'
 
 " NERDtree
 map <C-n> :NERDTreeToggle<CR>
