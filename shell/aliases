@@ -34,3 +34,6 @@ alias acs='apt-cache search'
 alias agd='sudo apt-get update'
 alias agg='sudo apt-get upgrade'
 
+# find
+alias f='find . -name'
+alias fci='find . -iname'
