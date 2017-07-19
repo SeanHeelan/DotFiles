@@ -67,6 +67,8 @@ au FileType c map <buffer> <Leader>p :lprevious<Return>
 au FileType c map <buffer> <Leader>n :lnext<Return>
 au FileType c map <buffer> <Leader>c :lclose<Return>
 au FileType c map <buffer> <Leader>g :ll<Space>
+au BufWritePre *.c :%s/\s\+$//e
+au BufWritePre *.h :%s/\s\+$//e
 
 " Python
 au FileType python set softtabstop=4 shiftwidth=4 tabstop=4
@@ -78,6 +80,8 @@ au FileType python map <buffer> <Leader>n :lnext<Return>
 au FileType python map <buffer> <Leader>c :lclose<Return>
 au FileType python map <buffer> <Leader>g :ll<Space>
 au BufWritePre *.py :%s/\s\+$//e
+" Disable syntax checking for Python to avoid issues with mypy
+" let g:syntastic_mode_map = { 'passive_filetypes': ['python'] }
 
 " Ruby
 au FileType ruby set softtabstop=2 shiftwidth=2 tabstop=2
@@ -104,6 +108,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_cpp_config_file = '.syntastic_config'
+let g:syntastic_c_config_file = '.syntastic_config'
 
 " NERDtree
 map <C-n> :NERDTreeToggle<CR>
@@ -115,3 +120,5 @@ highlight ColorColumn ctermbg=grey
 set colorcolumn=81
 set textwidth=80
 set number
+set ignorecase
+set scrolloff=10
