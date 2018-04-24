@@ -10,6 +10,12 @@ set runtimepath+=$HOME/.vim/bundle/jshint2.vim/
 filetype plugin indent on
 filetype on
 syntax on
+" Clear search highlighting
+nnoremap <esc> :noh<return><esc>
+nnoremap <esc>^[ <esc>^[
+
+" Buffers
+nnoremap <F5> :buffers<CR>:buffer<Space>
 
 " ctags
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
@@ -55,7 +61,7 @@ au filetype javascript vnoremap <silent><F3> :lprevious<CR>
 
 " C++
 au FileType cpp set softtabstop=4 shiftwidth=4 expandtab
-au BufWritePre *.cpp :%s/\s\+$//e
+" au BufWritePre *.cpp :%s/\s\+$//e
 au FileType cpp map <buffer> <Leader>p :lprevious<Return>
 au FileType cpp map <buffer> <Leader>n :lnext<Return>
 au FileType cpp map <buffer> <Leader>c :lclose<Return>
@@ -113,6 +119,13 @@ let g:syntastic_c_config_file = '.syntastic_config'
 " NERDtree
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Exploit sketching
+au BufRead,BufNewFile *.esk setfiletype esk
+au FileType esk set softtabstop=4 shiftwidth=4 tabstop=4
+au FileType esk set expandtab smarttab autoindent
+au FileType esk set colorcolumn=80
+au FileType esk set textwidth=79
 
 " General
 set background=light
