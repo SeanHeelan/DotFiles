@@ -104,3 +104,9 @@ if ! get_vim_plugin "git@github.com:nvie/vim-flake8.git" \
 	"vim-flake8"; then
 	exit 1
 fi
+
+if ! get_vim_plugin "git@github.com:tpope/vim-obsession.git" \
+	$VIM_BUNDLE/vim-obsession \
+	"vim-obsession"; then
+	exit 1
+fi
