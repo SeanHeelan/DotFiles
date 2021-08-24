@@ -63,24 +63,6 @@ if ! get_vim_plugin "https://github.com/rust-lang/rust.vim.git" \
 	exit 1
 fi
 
-if ! get_vim_plugin "https://github.com/Shutnik/jshint2.vim.git" \
-	$VIM_BUNDLE/jshint2.vim \
-	"jshint2.vim"; then
-	exit 1
-fi
-
-if ! get_vim_plugin "https://github.com/pangloss/vim-javascript.git" \
-	$VIM_BUNDLE/vim-javascript \
-	"vim-javascript"; then
-	exit 1
-fi
-
-if ! get_vim_plugin "https://github.com/dag/vim2hs.git" \
-	$VIM_BUNDLE/vim2hs \
-	"vim2hs"; then
-	exit 1
-fi
-
 if ! get_vim_plugin "git@github.com:xolox/vim-misc.git" \
 	$VIM_BUNDLE/vim-misc \
 	"vim-misc"; then

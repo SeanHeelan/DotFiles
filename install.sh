@@ -14,6 +14,7 @@ echo "Installing bash aliases ..."
 cat shell/aliases >> $HOME/.bashrc
 
 echo "Installing bashrc extensions ..."
+mkdir $HOME/.marks
 cat shell/bashrc >> $HOME/.bashrc
 
 echo "Installing terminator config ..."
