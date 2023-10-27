@@ -21,4 +21,7 @@ echo "Installing terminator config ..."
 mkdir -p ~/.config/terminator/                                                   
 cp shell/terminator_config ~/.config/terminator/config
 
+echo "Installing tmux.conf ..."
+cp tmux/tmux.conf $HOME/.tmux.conf
+
 echo "Done"
